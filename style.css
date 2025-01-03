@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    position: relative; /* Ensures positioned elements inside can use header as a reference */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+header .slogan {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #bbbbbb;
+}
+
+/* Contact Info (Top-Left Corner) */
+.contact-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Slight transparency for better readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: #ff5722;
+}
+
+.product button {
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e1e1e;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .slogan {
+        font-size: 1em;
+    }
+
+    .product {
+        width: 150px; /* Adjust product card size */
+    }
+
+    .product h2 {
+        font-size: 1em;
+    }
+
+    .product p {
+        font-size: 0.9em;
+    }
+
+    .product button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header .slogan {
+        font-size: 0.9em;
+    }
+
+    .product-list {
+        flex-direction: column; /* Stack products vertically */
+        gap: 15px;
+    }
+
+    .product {
+        width: 90%; /* Use most of the screen width */
+        margin: 0 auto; /* Center align products */
+    }
+
+    .contact-info {
+        font-size: 0.8em;
+        padding: 3px 8px;
+    }
+}
